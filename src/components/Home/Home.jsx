@@ -7,8 +7,8 @@ import { AboutUs } from "../AboutUs/AboutUs";
 export const Home = () => {
   return (
     <div>
-      <Header />
       <Intro />
+      <Header />
       <AboutUs />
       <Gallery />
     </div>
