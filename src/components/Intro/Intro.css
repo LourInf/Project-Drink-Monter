@@ -32,8 +32,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: #f7f7f7;
   text-align: center;
+  letter-spacing: 0.04em;
+  line-height: 28px;
 }
 
 .video-overlay h1 {
@@ -44,19 +46,21 @@
 }
 
 .cta-button {
-  border: 5px solid white;
+  border: 5px solid #bfa76f;
   background-color: transparent;
   border-radius: 50px;
-  color: white;
+  color: #bfa76f;
   padding: 0.7rem 1.2rem;
   font-size: 1rem;
   transition: background-color 0.3s, color 0.3s;
   z-index: 2;
   font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.04em;
+  line-height: 28px;
 }
 
 .cta-button:hover {
-  background-color: white;
+  background-color: #bfa76f;
   color: black;
 }
 
@@ -77,4 +81,23 @@
 .fa-circle-pause:hover {
   font-size: 30px;
   color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+  .intro-video-container {
+    height: 50vh;
+  }
+  .video-overlay h1 {
+    font-size: 1.5rem;
+    width: 80%;
+  }
+
+  .cta-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .video-overlay {
+    padding: 20px;
+  }
 }

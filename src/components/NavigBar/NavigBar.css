@@ -14,9 +14,33 @@
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
   transform: scaleX(0);
   transform-origin: 0% 50%;
-  background-color: greenyellow;
+  background-color: #bfa76f;
 }
 
 .nav-item:hover span::after {
   transform: scaleX(1);
+}
+
+.nav-container {
+  background-color: #212121;
+  height: 80px;
+}
+
+.cta-button.navibar {
+  border: 5px solid #bfa76f;
+  background-color: #bfa76f;
+  border-radius: 50px;
+  color: #f7f7f7;
+  padding: 0.4rem 0.5rem;
+  font-size: 0.8rem;
+  transition: background-color 0.3s, color 0.3s;
+  z-index: 2;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.04em;
+  line-height: 28px;
+}
+
+.cta-button.navibar:hover {
+  background-color: transparent;
+  color: #f7f7f7;
 }

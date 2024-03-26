@@ -8,8 +8,16 @@ import introVideo from "../../assets/intro-video.mp4";
 import "./Intro.css";
 
 export const Intro = () => {
-  const [playVideo, setPlayVideo] = useState(false);
+  const [playVideo, setPlayVideo] = useState(true); //set to true to match autoPlay
   const vidRef = useRef();
+
+  const togglePlayPause = () => {
+    if (playVideo) {
+      vidRef.current.pause();
+    } else {
+      vidRef.current.play();
+    }
+  };
 
   return (
     <div className="intro-video-container">
@@ -19,7 +27,7 @@ export const Intro = () => {
         ref={vidRef}
         loop
         muted
-        controls
+        controls={false}
         autoPlay
       />
       <div className="video-overlay d-flex flex-column">
@@ -29,16 +37,7 @@ export const Intro = () => {
         <button className="cta-button mt-5">Skontaktuj się z nami</button>
       </div>
       <div className="video-controls">
-        <div
-          onClick={() => {
-            setPlayVideo(!playVideo);
-            if (playVideo) {
-              vidRef.current.pause();
-            } else {
-              vidRef.current.play();
-            }
-          }}
-        >
+        <div onClick={togglePlayPause}>
           {playVideo ? (
             <FontAwesomeIcon icon={faCirclePause} color="#fff" fontSize={30} />
           ) : (
