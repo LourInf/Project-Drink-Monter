@@ -85,6 +85,7 @@
   .about-container h1 {
     font-size: 7vw;
     padding-right: 150px;
+    padding-top: 140px;
     line-height: 50px;
     text-align: center;
   }
@@ -104,9 +105,9 @@
   }
 
   .img-border::after {
-    top: 1%;
-    left: 12%;
-    right: 12%;
-    bottom: 17%;
+    top: 8%;
+    left: 15%;
+    right: 15%;
+    bottom: 8%;
   }
 }

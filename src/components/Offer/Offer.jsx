@@ -1,9 +1,8 @@
 import React from "react";
 import "./Offer.css";
-import herbs from "../../assets/herb.png";
 import margarita from "../../assets/margarita.png";
 import shaker from "../../assets/cocktail-shaker.png";
-import Card from "react-bootstrap/Card";
+import { OfferCard } from "./OfferCard";
 
 export const Offer = () => {
   return (
@@ -11,82 +10,24 @@ export const Offer = () => {
       <h1 className="container-offer-title">Oferta</h1>
       <div className="row align-items-center">
         <div className="col-md-6 text-center">
-          <div className="first-offer">
-            <Card
-              style={{
-                width: "45rem",
-                height: "30rem",
-                backgroundColor: "transparent",
-                border: "1px solid #bfa76f",
-                color: "#f7f7f7",
-                marginLeft: "140px",
-              }}
-            >
-              <Card.Body>
-                <img
-                  src={margarita}
-                  width="80px"
-                  alt="margarita"
-                  className="img-fluid img-offer"
-                />
-                <Card.Title className="title-offer">Organize Events</Card.Title>
-
-                <Card.Subtitle className="mb-4 mt-2">
-                  Card Subtitle
-                </Card.Subtitle>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content. Some quick example text to
-                  build on the card title and make up the bulk of the card's
-                  content.
-                </Card.Text>
-                <Card.Link className="link-offer" href="#">
-                  Download Offer
-                </Card.Link>
-                <Card.Link className="link-contact" href="#">
-                  Contact Us
-                </Card.Link>
-              </Card.Body>
-            </Card>
-          </div>
+          <OfferCard
+            className="first-offer"
+            imageSrc={margarita}
+            altText="Margarita"
+            title="Organize Events"
+            subtitle="Card Subtitle"
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sodales ut etiam sit amet. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Eget mauris pharetra et ultrices neque ornare aenean. A iaculis at erat pellentesque. Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Libero id faucibus nisl tincidunt eget nullam non nisi. Posuere morbi leo urna molestie at elementum. Odio ut sem nulla pharetra diam sit amet nisl suscipit. Lectus nulla at volutpat diam ut venenatis tellus."
+          />
         </div>
         <div className="col-md-6 text-center">
-          <div className="second-offer">
-            <Card
-              style={{
-                width: "45rem",
-                height: "30rem",
-                backgroundColor: "transparent",
-                border: "1px solid #bfa76f",
-                color: "#f7f7f7",
-              }}
-            >
-              <Card.Body>
-                <img
-                  src={shaker}
-                  width="100px"
-                  alt="margarita"
-                  className="img-fluid img-offer"
-                />
-                <Card.Title className="title-offer">Kursy Barmanski</Card.Title>
-                <Card.Subtitle className="mb-4 mt-2">
-                  Card Subtitle
-                </Card.Subtitle>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content. Some quick example text to
-                  build on the card title and make up the bulk of the card's
-                  content.
-                </Card.Text>
-                <Card.Link className="link-offer" href="#">
-                  Download Offer
-                </Card.Link>
-                <Card.Link className="link-contact" href="#">
-                  Contact Us
-                </Card.Link>
-              </Card.Body>
-            </Card>
-          </div>
+          <OfferCard
+            className="second-offer"
+            imageSrc={shaker}
+            altText="Cocktail Shaker"
+            title="Kursy Barmanski"
+            subtitle="Card Subtitle"
+            text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sodales ut etiam sit amet. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Eget mauris pharetra et ultrices neque ornare aenean. A iaculis at erat pellentesque. Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Libero id faucibus nisl tincidunt eget nullam non nisi. Posuere morbi leo urna molestie at elementum. Odio ut sem nulla pharetra diam sit amet nisl suscipit. Lectus nulla at volutpat diam ut venenatis tellus."
+          />
         </div>
       </div>
     </section>

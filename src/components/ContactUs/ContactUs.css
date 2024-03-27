@@ -2,7 +2,6 @@
   background-color: var(--background-dark-color);
   color: var(--text-primary-color);
   height: 100vh;
-  background-image: url("../../assets/cocktail.png");
   background-size: 30%;
   background-position: center;
   background-repeat: repeat-x;

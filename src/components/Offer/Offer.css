@@ -9,8 +9,27 @@
   padding-top: 100px;
 }
 
+.offer-card {
+  width: 100%;
+  max-width: 45rem;
+  height: auto;
+  background-color: transparent;
+  border: 1px solid #bfa76f;
+  color: #f7f7f7;
+  padding-bottom: 20px;
+}
+
+.first-offer {
+  margin-left: 150px;
+}
+
 .title-offer {
   color: var(--accent-color);
+  padding-bottom: 8px;
+}
+
+.img-offer {
+  padding-bottom: 20px;
 }
 
 .container-offer-title {
@@ -27,6 +46,21 @@
   margin-left: 80px;
 }
 @media (max-width: 768px) {
+  .offer-container {
+    height: auto; /* Adjust to auto or use min-height instead */
+    padding-bottom: 50px; /* Add some padding at the bottom */
+  }
+
+  .offer-card {
+    width: 80%; /* You might want to make it take more width on small screens */
+    margin: 20px auto;
+    height: auto;
+  }
+
+  .first-offer .offer-card {
+    margin: 20px auto;
+  }
+
   .container-offer-title {
     font-size: 45px;
     padding: 0 20px 20px 10px;

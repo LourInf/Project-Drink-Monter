@@ -12,7 +12,7 @@ export const Footer = () => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua.
       </p>
-      <div>
+      <div className="copyright">
         © {currentYear} Copyright:{" "}
         <a href="https://github.com/LourInf" className="footer-link">
           Lourdes Infante

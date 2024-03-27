@@ -1,5 +1,4 @@
 .gallery-container {
-  background-color: var(--text-primary-color);
   padding: 0 15px;
   background-color: var(--background-dark-color);
   padding-bottom: 80px;
@@ -27,6 +26,7 @@
 @media (max-width: 768px) {
   .gallery-container {
     padding: 0 10px;
+    padding-top: 140px;
   }
 
   .gallery-image {

@@ -12,11 +12,14 @@ export const Intro = () => {
   const vidRef = useRef();
 
   const togglePlayPause = () => {
-    if (playVideo) {
+    //manages the play/pause state of the video
+    const isPlaying = vidRef.current.paused ? false : true;
+    if (isPlaying) {
       vidRef.current.pause();
     } else {
       vidRef.current.play();
     }
+    setPlayVideo(!isPlaying); //after toggling the video state, it updates the playVideo state to reflect the current status
   };
 
   return (
@@ -38,15 +41,17 @@ export const Intro = () => {
           Skontaktuj się z nami
         </a>
       </div>
-      <div className="video-controls">
-        <div onClick={togglePlayPause}>
-          {playVideo ? (
-            <FontAwesomeIcon icon={faCirclePause} color="#fff" fontSize={30} />
-          ) : (
-            <FontAwesomeIcon icon={faCirclePlay} color="#fff" fontSize={30} />
-          )}
-        </div>
-      </div>
+      <button
+        className="video-controls"
+        onClick={togglePlayPause}
+        aria-label="Toggle video playback"
+      >
+        {playVideo ? (
+          <FontAwesomeIcon icon={faCirclePause} color="#fff" fontSize={25} />
+        ) : (
+          <FontAwesomeIcon icon={faCirclePlay} color="#fff" fontSize={25} />
+        )}
+      </button>
     </div>
   );
 };
