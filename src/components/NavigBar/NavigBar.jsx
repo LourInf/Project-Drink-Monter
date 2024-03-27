@@ -5,7 +5,7 @@ import "./NavigBar.css";
 
 export const NavigBar = () => {
   return (
-    <Navbar expand="lg" className="nav-container shadow p-3">
+    <Navbar expand className="nav-container shadow p-3">
       <Container className="justify-content-center ">
         <Navbar.Brand href="/" className="position-absolute start-0">
           <img
@@ -16,49 +16,60 @@ export const NavigBar = () => {
             alt="Drink Monter logo"
           />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          className="custom-toggler"
+        />
         <Navbar.Collapse
           id="basic-navbar-nav"
           className="justify-content-center"
         >
           <Nav>
             <Nav.Link
-              href="#home"
+              href="#aboutUs"
               className="nav-item"
               style={{
                 color: "#f7f7f7",
                 fontWeight: "500",
+                fontFamily: "Montserrat",
+                fontSize: "20px",
               }}
             >
-              <span>Home</span>
+              <span>O nas</span>
             </Nav.Link>
             <Nav.Link
-              href="#aboutUs"
+              href="#offer"
               className="nav-item"
               style={{
                 marginLeft: "30px",
                 marginRight: "30px",
                 color: "#f7f7f7",
                 fontWeight: "500",
+                fontFamily: "Montserrat",
+                fontSize: "20px",
               }}
             >
-              <span>O nas</span>
+              <span>Oferta</span>
             </Nav.Link>
             <Nav.Link
-              href="#"
+              href="#gallery"
               className="nav-item"
               style={{
                 color: "#f7f7f7",
                 fontWeight: "500",
+                fontFamily: "Montserrat",
+                fontSize: "20px",
               }}
             >
-              <span>Oferta</span>
+              <span>Galeria</span>
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
       <Navbar.Collapse className="position-absolute end-0 me-4">
-        <button className="cta-button navibar">Skontaktuj się z nami</button>
+        <a className="cta-button navibar" href="#contactUs" role="button">
+          Skontaktuj się z nami
+        </a>
       </Navbar.Collapse>
     </Navbar>
   );

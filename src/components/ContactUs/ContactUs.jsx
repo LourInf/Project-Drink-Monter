@@ -24,14 +24,16 @@ export const ContactUs = () => {
       )
       .then(
         (result) => {
-          setStateMessage("Message sent!");
+          setStateMessage("Wiadomość została wysłana!");
           setIsSubmitting(false);
           setTimeout(() => {
             setStateMessage(null);
           }, 5000); // hide message after 5 seconds
         },
         (error) => {
-          setStateMessage("Something went wrong, please try again later");
+          setStateMessage(
+            "Coś poszło nie tak, proszę spróbować ponownie później"
+          );
           setIsSubmitting(false);
           setTimeout(() => {
             setStateMessage(null);
@@ -44,60 +46,62 @@ export const ContactUs = () => {
   };
 
   return (
-    <div className="form-wrapper d-flex align-items-center justify-content-center">
-      <Form
-        ref={form}
-        onSubmit={sendEmail}
-        className="form-container text-center"
-      >
-        <h2 className="form-title">Skontaktuj się z nami</h2>
-        <Form.Group className="mb-3" controlId="formName">
-          <Form.Control
-            required
-            type="text"
-            placeholder="Imię i Nazwisko"
-            name="user_name"
-          />
-        </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Control
-            required
-            type="email"
-            placeholder="E-mail"
-            name="user_email"
-          />
-        </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formPhone">
-          <Form.Control
-            type="tel"
-            placeholder="Telefon (opcjonalny)"
-            name="user_phone"
-          />
-        </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formBasicMessage">
-          <Form.Control
-            required
-            as="textarea"
-            placeholder="Twoj tekst"
-            rows={3}
-            name="message"
-          />
-        </Form.Group>
-
-        <button
-          variant=""
-          type="submit"
-          disabled={isSubmitting}
-          value="Wyślij wiadomość"
-          className="form-submit-button mx-auto"
+    <section id="contactUs">
+      <div className="form-wrapper d-flex align-items-center justify-content-center">
+        <Form
+          ref={form}
+          onSubmit={sendEmail}
+          className="form-container text-center"
         >
-          Wyślij wiadomość
-        </button>
-        {stateMessage && <div className="message">{stateMessage}</div>}
-      </Form>
-    </div>
+          <h2 className="form-title">Skontaktuj się z nami</h2>
+          <Form.Group className="mb-3" controlId="formName">
+            <Form.Control
+              required
+              type="text"
+              placeholder="Imię i Nazwisko"
+              name="user_name"
+            />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Control
+              required
+              type="email"
+              placeholder="E-mail"
+              name="user_email"
+            />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formPhone">
+            <Form.Control
+              type="tel"
+              placeholder="Telefon (opcjonalny)"
+              name="user_phone"
+            />
+          </Form.Group>
+
+          <Form.Group className="mb-3" controlId="formBasicMessage">
+            <Form.Control
+              required
+              as="textarea"
+              placeholder="Twoj tekst"
+              rows={3}
+              name="message"
+            />
+          </Form.Group>
+
+          <button
+            variant=""
+            type="submit"
+            disabled={isSubmitting}
+            value="Wyślij wiadomość"
+            className="form-submit-button mx-auto"
+          >
+            Wyślij wiadomość
+          </button>
+          {stateMessage && <div className="message">{stateMessage}</div>}
+        </Form>
+      </div>
+    </section>
   );
 };

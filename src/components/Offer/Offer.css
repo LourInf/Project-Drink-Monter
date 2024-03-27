@@ -1,17 +1,19 @@
-.gallery-container {
-  background-color: var(--text-primary-color);
-  padding: 0 15px;
+.offer-container {
+  height: 100vh;
   background-color: var(--background-dark-color);
-  padding-bottom: 80px;
+  color: var(--text-primary-color);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 28px;
+  text-align: end;
+  padding-top: 100px;
 }
 
-.gallery-image {
-  width: 30%;
-  margin: 0 1.666%;
-  border-radius: 8px;
+.title-offer {
+  color: var(--accent-color);
 }
 
-.gallery-title {
+.container-offer-title {
   font-size: 60px;
   color: var(--accent-color);
   font-family: var(--font-titles);
@@ -25,16 +27,7 @@
   margin-left: 80px;
 }
 @media (max-width: 768px) {
-  .gallery-container {
-    padding: 0 10px;
-  }
-
-  .gallery-image {
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  .gallery-title {
+  .container-offer-title {
     font-size: 45px;
     padding: 0 20px 20px 10px;
     text-align: center;

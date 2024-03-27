@@ -1,7 +1,7 @@
 .about-container {
   height: 100vh;
-  background-color: #212121;
-  color: #f7f7f7;
+  background-color: var(--background-dark-color);
+  color: var(--text-primary-color);
   font-weight: 400;
   letter-spacing: 0.04em;
   line-height: 28px;
@@ -10,7 +10,8 @@
 
 .about-container h1 {
   font-size: 60px;
-  color: #bfa76f;
+  color: var(--accent-color);
+  font-family: var(--font-titles);
   font-weight: 400;
   letter-spacing: 0.04em;
   line-height: 60px;
@@ -25,6 +26,7 @@
   padding-right: 15px;
   padding-left: 15px;
   margin-left: 80px;
+  font-family: var(--font-base);
 }
 
 .img-profile {
@@ -46,14 +48,43 @@
   left: 30%;
   right: 7%;
   bottom: 30%;
-  border: 2px solid #bfa76f;
+  border: 2px solid var(--accent-color);
   pointer-events: none;
   z-index: 1;
+}
+
+.logo-background {
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative; /* Needed for the pseudo-element to position correctly */
+  overflow: hidden; /* Ensures the pseudo-element doesn't extend outside */
+}
+
+.logo-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../../assets/logo1.png"); /* Removed from .logo-background and places here */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.04; /* to make the image barely visible */
+  z-index: 0;
+}
+
+.logo-background > * {
+  position: relative;
+  z-index: 1; /* Ensures the text and other content appear above the background image */
 }
 
 @media (max-width: 768px) {
   .about-container h1 {
     font-size: 7vw;
+    padding-right: 150px;
     line-height: 50px;
     text-align: center;
   }
@@ -62,20 +93,20 @@
   .about-us-title {
     width: 100%;
     margin-left: 0;
-    padding: 0 15px;
     text-align: center;
   }
 
   .img-profile {
-    width: 90%;
+    width: 60%;
     height: auto;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
   }
 
   .img-border::after {
     top: 1%;
     left: 12%;
-    right: 2%;
+    right: 12%;
     bottom: 17%;
   }
 }

@@ -34,7 +34,9 @@ export const Intro = () => {
         <h1>
           Podnosząc Poziom Twojego Wydarzenia za Pomocą Wyjątkowych Koktajli
         </h1>
-        <button className="cta-button mt-5">Skontaktuj się z nami</button>
+        <a className="cta-button mt-5" href="#contactUs" role="button">
+          Skontaktuj się z nami
+        </a>
       </div>
       <div className="video-controls">
         <div onClick={togglePlayPause}>

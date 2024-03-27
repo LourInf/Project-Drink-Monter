@@ -1,14 +1,11 @@
 .form-wrapper {
-  background-color: #212121;
-  color: #f7f7f7;
+  background-color: var(--background-dark-color);
+  color: var(--text-primary-color);
   height: 100vh;
   background-image: url("../../assets/cocktail.png");
   background-size: 30%;
   background-position: center;
   background-repeat: repeat-x;
-  display: flex; /* Use flexbox to align children */
-  align-items: center; /* Center children vertically */
-  justify-content: center; /* Center children horizontally */
 }
 
 .form-container {
@@ -23,26 +20,27 @@
 
 .form-submit-button {
   margin-top: 10px;
-  border: 5px solid #bfa76f;
-  background-color: #bfa76f;
+  border: 5px solid var(--accent-color);
+  background-color: var(--accent-color);
   border-radius: 50px;
-  color: #f7f7f7;
+  color: var(--text-primary-color);
   padding: 0.4rem 1.5rem;
   font-size: 0.9rem;
   transition: background-color 0.3s, color 0.3s;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-titles);
   letter-spacing: 0.04em;
   line-height: 28px;
 }
 
 .form-submit-button:hover {
   background-color: transparent;
-  color: #f7f7f7;
+  color: var(--text-primary-color);
 }
 
 .form-title {
   font-size: 60px;
-  color: #bfa76f;
+  color: var(--accent-color);
+  font-family: var(--font-titles);
   font-weight: 400;
   letter-spacing: 0.04em;
   line-height: 60px;
@@ -55,6 +53,7 @@
 
 .form-container .form-control {
   background-color: rgba(255, 255, 255, 0.4);
+  font-family: var(--font-base);
 }
 
 .message {

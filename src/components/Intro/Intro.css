@@ -32,7 +32,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #f7f7f7;
+  color: var(--text-primary-color);
   text-align: center;
   letter-spacing: 0.04em;
   line-height: 28px;
@@ -46,10 +46,10 @@
 }
 
 .cta-button {
-  border: 5px solid #bfa76f;
+  border: 5px solid var(--accent-color);
   background-color: transparent;
   border-radius: 50px;
-  color: #bfa76f;
+  color: var(--accent-color);
   padding: 0.7rem 1.2rem;
   font-size: 1rem;
   transition: background-color 0.3s, color 0.3s;
@@ -57,11 +57,12 @@
   font-family: "Montserrat", sans-serif;
   letter-spacing: 0.04em;
   line-height: 28px;
+  text-decoration: none;
 }
 
 .cta-button:hover {
-  background-color: #bfa76f;
-  color: black;
+  background-color: var(--accent-color);
+  color: var(--background-dark-color);
 }
 
 .video-controls {
